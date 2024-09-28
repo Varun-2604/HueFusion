@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+/* @tailwind utilities;  */
+
+#root {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+}
+
+#titl {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 80px;
+}
+
+#tex {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+body {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(45deg, #000428, #2c003e); /* Starting gradient from dark blue to dark purple */
+  background-size: 200% 200%; /* Makes the gradient stretch */
+  animation: gradientAnimation 10s ease infinite; /* Animates the background */
+}
+
+/* Keyframes for smooth color transition */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%; /* Initial position of the gradient */
+  }
+  50% {
+    background-position: 100% 50%; /* Midway position of the gradient */
+  }
+  100% {
+    background-position: 0% 50%; /* End position of the gradient */
+  }
+}
+
+
+.flex-container {
+  display: flex;
+  height: 100vh;
+}
+
+.heading-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+.description {
+  color: white;
+}
+
+.input-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+#inputbg {
+  width: 80%;
+    max-width: 800px;
+    padding: 40px;
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.5),
+                0 0 30px rgba(0, 123, 255, 0.7),
+                inset 0 0 15px rgba(255, 255, 255, 0.2);
+    background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Light border with slight transparency */
+    background-clip: padding-box; /* Ensures the border doesn't affect the transparency */
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+    backdrop-filter: blur(10px); /* Adds a blur behind the translucent box */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#drag-drop-text {
+  color: rgba(0, 255, 255, 1); /* Neon color for text */
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.8),
+               0 0 20px rgba(0, 255, 255, 0.6),
+               0 0 30px rgba(0, 255, 255, 0.4);
+  margin-bottom: 30px; /* Increased space between text and submit button */
+}
+
+input {
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-translucent input background */
+  color: rgba(0, 255, 255, 1); /* Neon color for input text */
+  padding: 10px;
+  margin: 10px 0;
+  width: 90%;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 18px;
+}
+
+#inputbg:hover {
+  transform: scale(1.05);
+}
+
+#butt {
+  padding: 12px 30px;
+  background-color: rgba(0, 123, 255, 0.8); /* Semi-transparent blue */
+  color: aliceblue; /* Adjusted to contrast with the neon look */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  
+  /* Neon glow effect */
+  box-shadow: 
+      0 0 5px rgba(0, 123, 255, 0.6),
+      0 0 10px rgba(0, 123, 255, 0.7),
+      0 0 15px rgba(0, 123, 255, 0.8),
+      0 0 20px rgba(0, 123, 255, 1);
+}
+
+/* Hover effect for an even more intense glow */
+#butt:hover {
+  background-color: rgba(0, 123, 255, 1); /* Solid neon blue on hover */
+  
+  /* Enhanced glow on hover */
+  box-shadow: 
+      0 0 10px rgba(0, 123, 255, 1),
+      0 0 20px rgba(0, 123, 255, 1),
+      0 0 30px rgba(0, 123, 255, 1),
+      0 0 40px rgba(0, 123, 255, 1);
+}
+
+
+button:hover {
+  background-color: rgba(0, 123, 255, 1); /* Solid blue on hover */
+  box-shadow: 0 0 20px rgba(0, 123, 255, 1); /* Enhanced glow on hover */
+}
+
+.processed-images-container {
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.horizontal-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 40px;
+  padding-left: 18%;
+  margin-top: -150px;
+  
+}
+
+.horizontal-scroll img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  
+  
+}
+
+#final {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+#sel {
+  color: rgba(0, 255, 255, 1);
+  margin-bottom: 10px;
+}
